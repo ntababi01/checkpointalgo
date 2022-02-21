@@ -1,24 +1,22 @@
 ALGORITHM LongestWordLength
 VAR
-i,p,v:INTEGER;
+nbc,nbw,v:INTEGER;
 ch:string;
 BEGIN
- i := 0;
- p :=0;
+ nbc := 1;
+ nbw :=0;
  v:=0;
- print('donner un chainer de caractere')
- read(ch);
+ ch:='';
 DO {
- IF (ch[i] <> ' ')THEN
-         i:=i+1;
- IF (ch[i]in['o','a','i','u','y'])THEN
+    read(c);
+         nbc:=nbc+1;
+ IF (c in['o','a','i','u','y','e'])THEN
    v:=v+1;
-  else
-     p :=p+1;
-     END_IF
- WHILE (ch[i]=('.'))
+ END_IF
+ IF(c=' ')THEN
+     nbw:=nbw+1;
+ WHILE (c=('.'))
  END_WHILE            
-    }
-    write(ch);
+    };
 }
  
