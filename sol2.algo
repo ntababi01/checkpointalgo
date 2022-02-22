@@ -1,0 +1,28 @@
+ALGORITHM sol2
+VAR
+    set1,set2:array of integer;
+    ht:HASH_TABLE<integer,integer>
+    som,som2:integer:=0
+     i,l:integer
+BEGIN
+for
+ for i from 1 to set1.length do
+   ht.insert (set1[i],1)
+ END FOR
+ for i from 1 to set2.length do
+  if ht.lookup (set2[i])then 
+   ht.insert(set2[i], ht.get(set2[i])+1)
+ end if
+END FOR
+l:= ht.getkeys()
+for i from 1 to l.length do
+  if ht.get(l[i])=1 then
+   som:= som +l[i]
+  ense
+   som2:=som2+l[i]
+  end if
+ END FOR
+ write(som)
+ write(som2)
+ END   
+END
