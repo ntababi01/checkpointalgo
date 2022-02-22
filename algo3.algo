@@ -1,0 +1,48 @@
+ALGORITHM Dot-product;
+VAR
+  n,s,i:integer;  
+BEGIN
+ FOR i FROM 1 TO n DO 
+  dot-product(s,vi,vi+1)
+  IF s=0 THEN
+   write('les deux vecteurs sont ortogonaux')
+  END IF
+  i:=i+1;
+ END FOR  
+END
+procedure dot-product(var ps:integer,var v1,v2: array_of integer)
+  VAR 
+   i:integer;
+  BEGIN
+  ps:= 0;
+   FOR i FROM 1  TO v1.length DO
+      ps:= ps + v1[i]*v2[i];
+   END_FOR
+   END-FOR
+  END   
+
+ALGORITHM Dot-product;
+VAR
+  n,s,i:integer;  
+BEGIN
+ FOR i FROM 1 TO n DO 
+  s:=dot-product(s,vi,vi+1)
+  IF s=0 THEN
+   write('les deux vecteurs sont ortogonaux')
+  END IF
+  i:=i+1;
+ END FOR  
+END
+ FUNCTION dot-product(var ps:integer,var v1,v2: array_of integer)
+  VAR 
+   i:integer;
+  BEGIN
+   ps:= 0;
+   FOR i FROM 1 TO v1.length DO
+        ps:= ps + v1[i]*v2[i];
+   END_FOR
+   END-FOR
+   dot-product:=ps;
+  END  
+  
+
