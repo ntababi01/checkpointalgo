@@ -1,0 +1,15 @@
+ALGORITHM tri;
+VAR
+    tab: : ARRAY_OF integer[];
+    i,j,aux:integer;
+BEGIN
+    FOR i FROM 2 TO tab.length DO
+        FOR j FROM i-1 TO 1 DO
+            IF (t[i]<t[j]) THEN
+                aux:=t[j];
+                t[j]:=t[i];
+                t[i]:=aux;
+            END_IF
+        END_FOR
+    END_FOR  
+END
